@@ -81,11 +81,10 @@ body {
   bottom: 0;
 }
 .backdrop {
-  position: absolute;
+  position: fixed;
   margin: auto;
   object-fit: cover;
-  width: 300%;
-  height: 100%;
+
   left: 0;
   right: 0;
   top: 0;
