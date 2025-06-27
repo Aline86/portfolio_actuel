@@ -80,19 +80,6 @@ body {
   top: 0;
   bottom: 0;
 }
-.backdrop {
-  position: fixed;
-  margin: auto;
-  object-fit: cover;
-
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 0;
-}
 
 .container_column {
   width: 100%;
