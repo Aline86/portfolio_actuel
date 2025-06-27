@@ -80,7 +80,7 @@ h1 {
 }
 .retour {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   width: 50px;
@@ -113,7 +113,7 @@ h1 {
     padding: 0;
   }
   .backdrop {
-    width: 100%;
+    width: 96%;
   }
   h1 {
     font-size: 35px;
