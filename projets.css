@@ -1,0 +1,125 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+body {
+  background: url("img/nature.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  font-size: 72px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+.screen img {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.flex {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+  width: 100%;
+  font-size: large;
+  padding: 30px;
+}
+.backdrop {
+  position: absolute;
+  left: 0;
+  width: 54%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  border-radius: 5px;
+}
+.flex .cms {
+  width: 60%;
+}
+.flex .screen {
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+
+  padding: 30px;
+}
+.flex .image_bg {
+  width: 100%;
+}
+.flex .image_bg img {
+  margin-top: 60px;
+  width: 99%;
+  height: auto;
+  border-radius: 5px;
+}
+.flex a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.retour {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+}
+.retour img {
+  width: 100%;
+  left: 100%;
+  filter: invert(1) brightness(2);
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+    padding: 0;
+  }
+  .container .flex {
+    flex-direction: column;
+    width: 86%;
+
+    gap: 0;
+  }
+
+  .flex .cms {
+    width: 100%;
+  }
+  .flex .screen {
+    width: 100%;
+
+    padding: 0;
+  }
+  .backdrop {
+    width: 100%;
+  }
+  h1 {
+    font-size: 35px;
+    height: 100px;
+  }
+  .retour {
+    top: 75px;
+  }
+}
