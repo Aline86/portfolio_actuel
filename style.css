@@ -272,7 +272,7 @@ h1 {
   content: "";
 
   position: absolute;
-  font-size: 20px;
+
   background-repeat: no-repeat;
 
   display: flex;
@@ -299,7 +299,7 @@ h1 {
   height: 187px;
   opacity: 1;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 .carre_2::before {
   content: "Projets";
@@ -307,7 +307,7 @@ h1 {
   width: 187px;
   height: 187px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 .carre_3::before {
   content: "Expériences professionnelles";
@@ -315,7 +315,7 @@ h1 {
   width: 187px;
   height: 187px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 .carre_4::before {
   content: "Langues parlées";
@@ -323,7 +323,7 @@ h1 {
   width: 187px;
   height: 187px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 .shadow_right {
   content: "";
@@ -446,13 +446,13 @@ h1 {
   }
   .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: column;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 100px;
+    width: 100vw;
+    height: 300px;
     gap: 15px;
-    transform: rotate(-45deg);
+    transform: rotate(-0deg);
   }
 
   .container_name {
@@ -496,14 +496,14 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    width: 75px;
+    width: 90vw;
     height: 75px;
     border: 5px solid rgb(255, 255, 255);
     position: relative;
     box-shadow: inset 0px 0 20px 10px rgba(188, 188, 188, 0.8),
       0px 8px 2px -8px rgba(0, 0, 0, 0.3);
 
-    opacity: 0.4;
+    opacity: 1;
   }
   .carre:hover {
     display: flex;
@@ -511,7 +511,7 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    width: 75px;
+    width: 100vw;
     height: 75px;
     border: 5px solid rgba(73, 73, 73, 0.4);
     position: relative;
@@ -519,26 +519,6 @@ h1 {
       0px 8px 2px -8px rgba(49, 52, 87, 0.3);
 
     opacity: 1;
-  }
-  .carre_1 {
-    transform: translate(0px);
-    z-index: 99999;
-    opacity: 1;
-  }
-  .carre_2 {
-    transform: translate(-93px);
-    animation: close_carre_2 0.5s backwards;
-    opacity: 0;
-  }
-  .carre_3 {
-    transform: translate(0px, -93px);
-    animation: close_carre_3 0.5s backwards;
-    opacity: 0;
-  }
-  .carre_4 {
-    transform: translate(-93px, -93px);
-    animation: close_carre_4 0.5s backwards;
-    opacity: 0;
   }
 
   .carre::after {
@@ -548,8 +528,8 @@ h1 {
     z-index: 20;
     top: 0;
     left: 0;
-    width: 71px;
-    height: 71px;
+    width: 98%;
+    height: 98%;
     border-radius: 25px;
     border: 4px solid rgb(255, 255, 255);
     filter: blur(0.2rem);
@@ -563,11 +543,15 @@ h1 {
     z-index: 20;
     top: 0;
     left: 5px;
-    width: 66px;
+    width: 95%;
     height: 66px;
     border-radius: 15px;
     border: 4px solid rgb(255, 255, 255);
     filter: blur(0.2rem);
+  }
+  .container:hover .carre_1 {
+    animation-play-state: running;
+    animation: open_carre_1 0.5s ease-in-out forwards;
   }
   .container:hover .carre_2 {
     animation-play-state: running;
@@ -581,72 +565,65 @@ h1 {
     animation-play-state: running;
     animation: open_carre_4 0.5s ease-in-out forwards;
   }
-  @keyframes open_carre_2 {
+  .carre_1 {
+    transform: translate(110%);
+    z-index: 99999;
+    opacity: 1;
+  }
+  .carre_2 {
+    transform: translate(-110%);
+    animation: close_carre_2 0.5s backwards;
+    opacity: 1;
+  }
+  .carre_3 {
+    transform: translate(110%, 0);
+    animation: close_carre_3 0.5s backwards;
+    opacity: 1;
+  }
+  .carre_4 {
+    transform: translate(-110%);
+    animation: close_carre_4 0.5s backwards;
+    opacity: 1;
+  }
+  @keyframes open_carre_1 {
     from {
-      transform: translate(-93px);
-      opacity: 0;
+      transform: translate(110%, 0);
     }
 
     to {
-      transform: translate(0);
-      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes open_carre_2 {
+    from {
+      transform: translate(-110%, 0);
+    }
+
+    to {
+      transform: translate(0, 0);
     }
   }
   @keyframes open_carre_3 {
     from {
-      transform: translate(0px, -93px);
-      opacity: 0;
+      transform: translate(110%, 0);
     }
 
     to {
-      transform: translate(0px, 0px);
-      opacity: 1;
+      transform: translate(0, 0);
     }
   }
+
   @keyframes open_carre_4 {
     from {
-      transform: translate(-93px, -93px);
-      opacity: 0;
+      transform: translate(-110%, 0);
     }
 
     to {
-      transform: translate(0px, 0px);
-      opacity: 1;
+      transform: translate(0, 0);
     }
   }
-  @keyframes close_carre_2 {
-    from {
-      transform: translate(0);
-      opacity: 1;
-    }
 
-    to {
-      transform: translate(-93px);
-      opacity: 0;
-    }
-  }
-  @keyframes close_carre_3 {
-    from {
-      transform: translate(0px, 0px);
-      opacity: 1;
-    }
-
-    to {
-      transform: translate(0px, -93px);
-      opacity: 0;
-    }
-  }
-  @keyframes close_carre_4 {
-    from {
-      transform: translate(0px, 0px);
-      opacity: 1;
-    }
-
-    to {
-      transform: translate(-93px, -93px);
-      opacity: 0;
-    }
-  }
   .carre_1::before,
   .carre_2::before,
   .carre_3::before,
@@ -660,33 +637,33 @@ h1 {
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%);
     border-radius: 20px;
     object-fit: contain;
   }
 
   .carre_1::before {
     content: "CV";
-    background-size: 75px 75px;
+    background-size: 90% 90%;
     width: fit-content;
     height: 25px;
     opacity: 1;
   }
   .carre_2::before {
     content: "Projets";
-    background-size: 75px 75px;
+    background-size: 90% 90%;
     width: fit-content;
     height: 25px;
   }
   .carre_3::before {
     content: "Expériences pro";
-    background-size: 75px 75px;
+    background-size: 90% 90%;
     width: fit-content;
     height: 25px;
   }
   .carre_4::before {
     content: "Langues";
-    background-size: 75px 75px;
+    background-size: 90% 90%;
     width: fit-content;
     height: 25px;
   }
@@ -743,12 +720,12 @@ h1 {
   .container {
     position: absolute;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: column;
     justify-content: center;
     align-items: center;
-    width: 240px;
+    width: 100vw;
     gap: 30px;
-    transform: rotate(45deg);
+    transform: rotate(0deg);
     top: 50vh;
     right: 0;
     z-index: -1;
@@ -784,8 +761,8 @@ h1 {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     position: absolute;
     left: 25px;
-    top: 28vh;
-    font-size: 25px;
+    top: 30vh;
+    font-size: 35px;
     color: white;
     text-align: center;
     font-weight: 100;
@@ -837,6 +814,22 @@ h1 {
     height: 35vw;
     z-index: 9999;
     border-radius: 20px;
+  }
+  .container.show .carre_1 {
+    animation-play-state: running;
+    animation: open_carre_1 0.5s ease-in-out forwards;
+  }
+  .container.show .carre_2 {
+    animation-play-state: running;
+    animation: open_carre_2 0.5s ease-in-out forwards;
+  }
+  .container.show .carre_3 {
+    animation-play-state: running;
+    animation: open_carre_3 0.5s ease-in-out forwards;
+  }
+  .container.show .carre_4 {
+    animation-play-state: running;
+    animation: open_carre_4 0.5s ease-in-out forwards;
   }
 
   .show_langues img {

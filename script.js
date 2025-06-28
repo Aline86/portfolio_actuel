@@ -27,19 +27,16 @@ window.addEventListener("scroll", (e) => {
 
   const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollY > 0) {
-    container.style.transform = `translate(-${scrollY}px, ${
-      scrollY * 0.5
-    }px) rotate(45deg)`;
-  }
-  if (window.matchMedia("(max-width: 1200px)").matches) {
-    const container = document.querySelector(".container");
-    if (window.scrollY <= 10) {
-      container.style.zIndex = -1;
-    } else {
-      container.style.zIndex = 9999;
+  if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (scrollY > 0) {
+      container.style.transform = `translate(-${scrollY}px, ${
+        scrollY * 0.5
+      }px) rotate(45deg)`;
     }
-    if (scrollY * 1.5 > 0 && scrollY * 1.5 < 350) {
+    if (
+      scrollY > window.innerHeight * 0.4 &&
+      scrollY < window.innerHeight * 0.8
+    ) {
       container.classList.add("show");
     } else {
       container.classList.remove("show");
