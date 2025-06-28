@@ -200,11 +200,11 @@ body {
     display: none;
   }
   .left {
-    left: -25px;
+    left: 25px;
     z-index: 99999;
   }
   .right {
-    right: -25px;
+    right: 25px;
     z-index: 99999;
   }
   .left,
