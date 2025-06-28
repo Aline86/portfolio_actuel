@@ -27,7 +27,7 @@ window.addEventListener("scroll", (e) => {
 
   const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-  if (window.matchMedia("(min-width: 1200px)").matches) {
+  if (window.matchMedia("(min-width: 700px)").matches) {
     if (scrollY > 0) {
       container.style.transform = `translate(-${scrollY}px, ${
         scrollY * 0.5
@@ -42,7 +42,7 @@ window.addEventListener("scroll", (e) => {
       container.classList.remove("show");
     }
   } else {
-    if (scrollY > 50 && scrollY < 600) {
+    if (scrollY > 50) {
       container.classList.add("show");
     } else {
       container.classList.remove("show");

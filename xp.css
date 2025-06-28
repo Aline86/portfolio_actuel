@@ -164,7 +164,7 @@ body {
     font-size: 25px !important;
   }
   .container_column {
-    width: 100%;
+    width: 100vw;
     height: fit-content;
   }
   .web {
