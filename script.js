@@ -42,7 +42,7 @@ window.addEventListener("scroll", (e) => {
       container.classList.remove("show");
     }
   } else {
-    if (scrollY > 50) {
+    if (scrollY > 150) {
       container.classList.add("show");
     } else {
       container.classList.remove("show");
