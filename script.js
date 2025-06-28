@@ -43,7 +43,7 @@ window.addEventListener("scroll", (e) => {
     }
   } else {
     if (
-      scrollY > window.innerHeight * 0.2 &&
+      scrollY > window.innerHeight * 0.6 &&
       scrollY < window.innerHeight * 0.9
     ) {
       container.classList.add("show");
