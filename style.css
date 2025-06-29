@@ -438,6 +438,10 @@ h1 {
     padding: 0;
     overflow-x: hidden;
   }
+  .container_body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   body {
     background: url("img/bg.jpg") no-repeat center center;
 
