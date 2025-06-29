@@ -432,7 +432,7 @@ h1 {
 @media screen and (max-width: 850px) {
   body,
   html {
-    height: 300vh;
+    height: 200vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -779,7 +779,7 @@ h1 {
     align-items: center;
     gap: 20px;
     z-index: 9999;
-    top: 240vh;
+    top: 160vh;
 
     background-color: white;
     padding-top: 30px;
