@@ -3,8 +3,10 @@ window.addEventListener("scroll", (e) => {
   const leave_left = document.getElementById("leave_left");
   const leave_right = document.getElementById("leave_right");
   const shadow_right = document.querySelector(".shadow_right");
-
+  const container = document.querySelector(".container");
   const name = document.querySelector(".name");
+
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
   if (window.matchMedia("(max-width: 700px)").matches) {
     if (scrollY > 150 && scrollY < 1000) {
       container.classList.add("show");
@@ -24,14 +26,12 @@ window.addEventListener("scroll", (e) => {
     -window.scrollY * 0.5
   }px, ${-window.scrollY * 2}px) rotateZ(-${rotation}deg)`;
   portfolio.style.opacity = 0 + window.scrollY / 300;
-  const container = document.querySelector(".container");
+
   if (window.scrollY <= 200) {
     container.style.zIndex = -1;
   } else {
     container.style.zIndex = 9999;
   }
-
-  const scrollY = window.scrollY || document.documentElement.scrollTop;
 
   if (window.matchMedia("(min-width: 700px)").matches) {
     if (scrollY > 0) {
