@@ -52,11 +52,10 @@ window.addEventListener("DOMContentLoaded", () => {
       leave_right.style.transform = `translate3d(${window.scrollY * 0.3}px, ${
         -window.scrollY * 0.3
       }px, ${-window.scrollY}px) rotateZ(${rotation}deg)`;
-      name.style.opacity = 0 + window.scrollY / 300;
+
       shadow_right.style.transform = `translate3d(${-window.scrollY}px, ${
         -window.scrollY * 0.5
       }px, ${-window.scrollY * 2}px) rotateZ(-${rotation}deg)`;
-      portfolio.style.opacity = 0 + window.scrollY / 300;
     }
   });
 });
