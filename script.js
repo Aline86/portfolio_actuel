@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  if (window.matchMedia("(max-width: 850px)").matches) {
+  if (window.matchMedia("(max-width: 1200px)").matches) {
     const container = document.querySelector(".container");
     container.classList.add("show");
     container.style.zIndex = 9999;

@@ -151,15 +151,27 @@ body {
   filter: invert(1) brightness(2);
 }
 @media screen and (max-width: 800px) {
-  html {
-    max-height: 100vh;
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw; /* 3 slides × 100vw; adjust if needed */
+    overflow: hidden;
   }
-  .body {
-    width: 100vw;
-    height: fit-content;
+  .container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 300vw; /* 3 slides × 100vw; adjust if needed */
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
+
   .web .video video {
-    width: 100vw;
+    height: 300vh;
   }
   .web:nth-child(1) h2,
   .web:nth-child(3) h2 {
@@ -176,6 +188,9 @@ body {
     width: 100vw;
     height: fit-content;
   }
+  .container_flex {
+    width: 100vw;
+  }
   .web {
     position: relative;
     transition: all 0.5s ease-in-out;
@@ -188,34 +203,24 @@ body {
     align-items: center;
     justify-content: center !important;
     margin: 0 auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    scroll-snap-type: x mandatory;
     color: white;
     z-index: 99999;
   }
 
-  .web .video video {
-    position: absolute;
-
-    height: fit-content;
-    margin: auto;
-    object-fit: cover;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
   .backdrop {
     display: none;
   }
-
+  .left {
+    left: -10px;
+  }
+  .right {
+    right: -10px;
+  }
   .left,
   .right {
     position: fixed;
-    display: none;
-    top: 35%;
+
+    top: 45%;
   }
 }
