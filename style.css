@@ -429,7 +429,7 @@ h1 {
   height: 100%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   body,
   html {
     height: 300vh;
@@ -443,6 +443,7 @@ h1 {
     z-index: 999;
     background-size: cover;
     background-position: fixed;
+    overflow-x: hidden;
   }
   .container {
     display: flex;
@@ -453,6 +454,7 @@ h1 {
     height: 300px;
     gap: 15px;
     transform: rotate(-0deg);
+    top: 120vh;
   }
 
   .container_name {
@@ -672,7 +674,7 @@ h1 {
 
   video {
     position: absolute;
-    top: 150vh;
+    top: 50vh;
     left: 0;
     width: 100vw;
     height: 114px;
@@ -681,11 +683,11 @@ h1 {
   }
   h1 {
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     text-transform: uppercase;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
+    top: 50vh;
     width: 100vw;
     height: 75px;
     font-size: 30px;
@@ -728,7 +730,7 @@ h1 {
     width: 100vw;
     gap: 30px;
     transform: rotate(0deg);
-    top: 50vh;
+    top: 80vh;
     right: 0;
     z-index: -1;
   }
