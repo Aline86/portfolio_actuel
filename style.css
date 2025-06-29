@@ -290,7 +290,7 @@ h1 {
 .carre_3:hover::before,
 .carre_4:hover::before {
   transform: translate(187px, 50px, 100px) rotateZ(10deg);
-  font-size: 25px;
+  font-size: 20px;
 }
 .carre_1::before {
   content: "CV détaillé";
