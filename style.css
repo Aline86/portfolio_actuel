@@ -568,6 +568,7 @@ h1 {
   .carre_1 {
     transform: translate(110%);
     z-index: 99999;
+    animation: close_carre_1 0.5s backwards;
     opacity: 1;
   }
   .carre_2 {
@@ -659,7 +660,8 @@ h1 {
     content: "Expériences pro";
     background-size: 90% 90%;
     width: fit-content;
-    height: 20px;
+    height: 25px;
+    font-size: 23px;
   }
   .carre_4::before {
     content: "Langues";
