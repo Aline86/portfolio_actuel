@@ -665,7 +665,8 @@ h1 {
     content: "Expériences pro";
     background-size: 90% 90%;
     width: fit-content;
-    height: 25px;
+    height: 35px;
+    line-height: 35px;
     font-size: 20px;
   }
   .carre_4::before {
