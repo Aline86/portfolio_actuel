@@ -5,7 +5,13 @@ window.addEventListener("scroll", (e) => {
   const shadow_right = document.querySelector(".shadow_right");
 
   const name = document.querySelector(".name");
-
+  if (window.matchMedia("(max-width: 700px)").matches) {
+    if (scrollY > 150 && scrollY < 1000) {
+      container.classList.add("show");
+    } else {
+      container.classList.remove("show");
+    }
+  }
   const portfolio = document.querySelector(".portfolio");
   leave_left.style.transform = `translate3d(${-window.scrollY * 0.5}px, ${
     -window.scrollY * 0.3
@@ -37,12 +43,6 @@ window.addEventListener("scroll", (e) => {
       scrollY > window.innerHeight * 0.4 &&
       scrollY < window.innerHeight * 0.8
     ) {
-      container.classList.add("show");
-    } else {
-      container.classList.remove("show");
-    }
-  } else {
-    if (scrollY > 150 && scrollY < 1000) {
       container.classList.add("show");
     } else {
       container.classList.remove("show");

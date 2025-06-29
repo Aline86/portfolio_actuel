@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 .web:nth-child(1) h2,
 .web:nth-child(3) h2 {
   margin-top: 30px;
@@ -148,7 +149,7 @@ body {
   left: 100%;
   filter: invert(1) brightness(2);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .web .video video {
     width: 100vw;
   }
@@ -202,21 +203,11 @@ body {
   .backdrop {
     display: none;
   }
-  .left {
-    left: -25px;
-    z-index: 99999;
-  }
-  .right {
-    right: -25px;
-    z-index: 99999;
-  }
+
   .left,
   .right {
     position: fixed;
-
+    display: none;
     top: 35%;
-  }
-  .retour {
-    top: 75px;
   }
 }
