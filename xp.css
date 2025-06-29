@@ -13,6 +13,7 @@
   font-size: 25px;
 }
 .formation_h2 {
+  margin-top: 60px;
   font-size: 35px !important;
 }
 body {
@@ -150,6 +151,13 @@ body {
   filter: invert(1) brightness(2);
 }
 @media screen and (max-width: 800px) {
+  html {
+    max-height: 100vh;
+  }
+  .body {
+    width: 100vw;
+    height: fit-content;
+  }
   .web .video video {
     width: 100vw;
   }

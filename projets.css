@@ -3,6 +3,9 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
 }
+html {
+  max-height: 120vh;
+}
 body {
   background: url("img/nature.jpg") no-repeat center center;
   background-attachment: fixed;
